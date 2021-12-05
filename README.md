@@ -57,4 +57,4 @@ The User Transaction Table
 
 The Statement of Transactions Page
 
-<img src = "Images/Statement Page.png">
+<img src = "Images/Statement of Transaction Page.png">

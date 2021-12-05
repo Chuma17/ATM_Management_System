@@ -47,6 +47,14 @@ The Change Pin Page
 
 <img src = "Images/Change Pin Page.png">
 
+The User Database Table
+
+<img src = "Images/User Database Table.png">
+
+The User Transaction Table
+
+<img src = "Images/User Transaction Table.png">
+
 The Statement of Transactions Page
 
 <img src = "Images/Statement Page.png">

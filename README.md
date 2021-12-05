@@ -29,11 +29,11 @@ The Home Page
 
 The Deposit Page
 
-<img src = "Images/Deposit Page.png">
+
 
 The Withdrawal Page
 
-<img src = "Images/Withdrawal Page.png">
+
 
 The Fast Cash Page
 

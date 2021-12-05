@@ -5,4 +5,3 @@ To run the solution, download the file 'ATM Management System Installer.rar'.
 
 The StartUp Page
 
-![Opening Page](https://user-images.githubusercontent.com/84593939/144753434-aaf18ef3-3906-450d-84f4-1883c2dba472.png)

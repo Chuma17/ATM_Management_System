@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ATM Management System.exe" version="1.0.0.2" publicKeyToken="583b1a64d483b133" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="ic_local_atm_128_28469.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ATM Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ATM Management System.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ATM Management System.exe" size="1003920">
+      <assemblyIdentity name="ATM Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rtszOl8D0G+NvDyXqrgF2ifFgDljYRbnkG0FDRpQNmI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ATM Management System.exe.config" size="559">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>62SkuXUIizvuHkWq6iqoWSy2fB6HZSYad0LdRVQXJWw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ic_local_atm_128_28469.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+3TRqiXNdP74bAfN+JH6Cg9jLWjuAKha8FVgRYwLJYQ=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=CHUMA\HP" issuerKeyHash="3a159f3c5e329ff053ed77abf09c7b9eee5a4443" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>grAC0fXWe5GZzqJlXuM2L9xrt6O3oqnA7eNUR9A3Qpw=</DigestValue></Reference></SignedInfo><SignatureValue>o0lfd5EvEPFdT/MyltypPSDdovvj/Q39oGUv9nfuMdk/KPh+wjuXmUNiambeJxyIKA7PpnaewIYASyO55IOuhAgPiO7G1DjQjFMlB7ZSQJfAZCV2+dRouhsAZvEGJNZMJuttu0v2ZzVbnrRS3kxg3dyaZHgY/tBUnVxa1iOCMlo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1NEo+Ubi+HktxKHVlc3ZsFmna6hUJ885SGSg5cUinvPTgo8RceplvfOsE5iZxui7ehdjweRUZM9wKTjutOCsd46PevAP9bkoM+lHjh7OzpvJ2HfkuLHK+f8+z4h4txhH+MWYOBJVul9BR4Iui7TCa6LFS5UmiJ+QiV+EUUN56zE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9c4237d04754e3edc0a9a2b7a3b76bdc2f36e35e65a2ce99917bd6f5d102b082" Description="" Url=""><as:assemblyIdentity name="ATM Management System.exe" version="1.0.0.2" publicKeyToken="583b1a64d483b133" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CHUMA\HP</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6GXTXLEW8m9wzqUST9fKnZA1t7UoLGYvwzByvX6f4D8=</DigestValue></Reference></SignedInfo><SignatureValue>ZedLOkt9pZQRgTO8pcP+vxXajlzoZrnsJBRr6kmP18y1YdbjFUcqYx5MUq8QEr5AAoYDHQzBt5jY+WsFbHLJ6DY+zyFluPwae7cOixBylCDguS59ekSMmkmkxbs8s+ezcqa3XySkAsTI4qnWZobEV9gOereRdibAkQiXfCW4CyE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1NEo+Ubi+HktxKHVlc3ZsFmna6hUJ885SGSg5cUinvPTgo8RceplvfOsE5iZxui7ehdjweRUZM9wKTjutOCsd46PevAP9bkoM+lHjh7OzpvJ2HfkuLHK+f8+z4h4txhH+MWYOBJVul9BR4Iui7TCa6LFS5UmiJ+QiV+EUUN56zE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBuTCCASKgAwIBAgIQGgp7eMZb4J9GdS0zzDBSpTANBgkqhkiG9w0BAQsFADAbMRkwFwYDVQQDHhAAQwBIAFUATQBBAFwASABQMB4XDTIxMTIwNTAxMDI0NloXDTIyMTIwNTA3MDI0NlowGzEZMBcGA1UEAx4QAEMASABVAE0AQQBcAEgAUDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA1NEo+Ubi+HktxKHVlc3ZsFmna6hUJ885SGSg5cUinvPTgo8RceplvfOsE5iZxui7ehdjweRUZM9wKTjutOCsd46PevAP9bkoM+lHjh7OzpvJ2HfkuLHK+f8+z4h4txhH+MWYOBJVul9BR4Iui7TCa6LFS5UmiJ+QiV+EUUN56zECAwEAATANBgkqhkiG9w0BAQsFAAOBgQBFF5GjcFpInitORyZeGr02yZfApGu1uikcwwvCFPQ8meLdHVNbFd+bdPrf9JMtuL0G+5wiudZ5y36yRgjMZ+Cquy055EG5ItLiJ4MW1jSMDeOj7ucu8CT/Iwxw/yskc5ujJQ2R4hWKUJrGHJU+plGmx6WcDzE+7aKLM0Zz7pXDeQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

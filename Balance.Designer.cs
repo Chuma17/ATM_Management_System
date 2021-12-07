@@ -56,18 +56,18 @@ namespace ATM_Management_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(129, 193);
+            this.label2.Location = new System.Drawing.Point(12, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 32);
+            this.label2.Size = new System.Drawing.Size(183, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Your Balance";
+            this.label2.Text = "Your Balance:";
             // 
             // Balancelbl
             // 
             this.Balancelbl.AutoSize = true;
             this.Balancelbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Balancelbl.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Balancelbl.Location = new System.Drawing.Point(400, 193);
+            this.Balancelbl.Location = new System.Drawing.Point(231, 193);
             this.Balancelbl.Name = "Balancelbl";
             this.Balancelbl.Size = new System.Drawing.Size(214, 32);
             this.Balancelbl.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace ATM_Management_System
             this.Exit.AutoSize = true;
             this.Exit.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Exit.Location = new System.Drawing.Point(711, 9);
+            this.Exit.Location = new System.Drawing.Point(663, 9);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(27, 28);
             this.Exit.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace ATM_Management_System
             this.AccNumlbl.AutoSize = true;
             this.AccNumlbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccNumlbl.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.AccNumlbl.Location = new System.Drawing.Point(409, 114);
+            this.AccNumlbl.Location = new System.Drawing.Point(240, 114);
             this.AccNumlbl.Name = "AccNumlbl";
             this.AccNumlbl.Size = new System.Drawing.Size(117, 32);
             this.AccNumlbl.TabIndex = 4;
@@ -102,11 +102,11 @@ namespace ATM_Management_System
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(129, 114);
+            this.label5.Location = new System.Drawing.Point(12, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 32);
+            this.label5.Size = new System.Drawing.Size(230, 32);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Account Number";
+            this.label5.Text = "Account Number:";
             // 
             // Back
             // 
@@ -137,7 +137,7 @@ namespace ATM_Management_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(750, 324);
+            this.ClientSize = new System.Drawing.Size(702, 324);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.label5);

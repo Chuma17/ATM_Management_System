@@ -16,8 +16,8 @@ namespace ATM_Management_System
             string connectionString = ConfigurationManager.ConnectionStrings["ATM_Management_System.Properties.Settings.ATMdbConnectionString"].ConnectionString;
             sqlConnection = new SqlConnection(connectionString);
         }
-        
-        
+
+
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -38,7 +38,6 @@ namespace ATM_Management_System
             {
                 //Query to add all the values to the database
                 string query = "insert into TransactionTbl values ('" + Login.AccNumber + "', '" + TransactionType + "', '" + AmountWithdrawntb.Text + "', '" + DateTime.Today.Date.ToString() + "')";
-
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
                 sqlConnection.Open();
                 sqlCommand.ExecuteScalar();
@@ -51,56 +50,63 @@ namespace ATM_Management_System
 
         private void Withdrawbtn_Click(object sender, EventArgs e)
         {
-            try
+
+            if (AmountWithdrawntb.Text == "")
             {
-                if (AmountWithdrawntb.Text == "" || Convert.ToInt32(AmountWithdrawntb.Text) < 0)
+                MessageBox.Show("Enter a valid amount to withdraw");
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Enter a valid amount to deposit");
-                }
-                else
-                {
-                    if (Convert.ToInt32(AmountWithdrawntb.Text) > oldBalance)
+                    float ke;
+                    if (!float.TryParse(AmountWithdrawntb.Text, out ke))
                     {
-                        MessageBox.Show("Insufficient funds.\nTry again");
+                        MessageBox.Show("Input digits only");
                     }
                     else
                     {
-                        newBalance = oldBalance - Convert.ToInt32(AmountWithdrawntb.Text);
-                        try
+                        if (float.Parse(AmountWithdrawntb.Text) > oldBalance)
                         {
-                            sqlConnection.Open();
-                            //Query to add deposit to app balance.
-                            string query = "UPDATE AccountTbl SET Balance = " + newBalance + " where AcctNum = '" + Login.AccNumber + "'";
-                            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                            sqlCommand.ExecuteScalar();
+                            MessageBox.Show("Insufficient funds.\nTry again");
+                        }
+                        else
+                        {
+                            newBalance = oldBalance - float.Parse(AmountWithdrawntb.Text);
+                            try
+                            {
+                                sqlConnection.Open();
+                                //Query to add deposit to app balance.
+                                string query = "UPDATE AccountTbl SET Balance = " + newBalance + " where AcctNum = '" + Login.AccNumber + "'";
+                                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                                sqlCommand.ExecuteScalar();
 
-                            MessageBox.Show("Withdrawal successfull!");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.ToString());
-                        }
-                        finally
-                        {
-                            sqlConnection.Close();
-                            AddTransaction();
-                            AmountWithdrawntb.Clear();
-                            HOME home = new HOME();
-                            home.Show();
-                            this.Hide();
+                                MessageBox.Show("Withdrawal successfull!");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.ToString());
+                            }
+                            finally
+                            {
+                                sqlConnection.Close();
+                                AddTransaction();
+                                
+                                HOME home = new HOME();
+                                home.Show();
+                                this.Hide();
+                            }
                         }
                     }
-
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Input digits only");
                 }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Input digits only");
-            }
-            
-        }
+        }    
 
-        int oldBalance, newBalance;
+        float oldBalance, newBalance;
         private void GetBalance()
         {
             sqlConnection.Open();
@@ -112,12 +118,11 @@ namespace ATM_Management_System
             {//make the existing balance an int variable so it can be added
                 DataTable dataTable = new DataTable();
                 sda.Fill(dataTable);
-                oldBalance = Convert.ToInt32(dataTable.Rows[0][0].ToString());
+                oldBalance = float.Parse(dataTable.Rows[0][0].ToString());
                 sqlConnection.Close();
             }
         }
         
-
         private void Back_Click(object sender, EventArgs e)
         {
             HOME home = new HOME();

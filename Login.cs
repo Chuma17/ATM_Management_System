@@ -79,5 +79,10 @@ namespace ATM_Management_System
             confirmEMail.Show();
             this.Hide();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

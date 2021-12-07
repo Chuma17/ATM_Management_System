@@ -25,36 +25,44 @@ namespace ATM_Management_System
             }
             else
             {
-                if (NewPin.Text == "" || Convert.ToInt32(NewPin.Text) < 0 || ConfirmPin.Text == "" || Convert.ToInt32(ConfirmPin.Text) < 0)
+                try
                 {
-                    MessageBox.Show("Enter a valid pin");
+                    if (NewPin.Text == "" || Convert.ToInt32(NewPin.Text) < 0 || NewPin.Text.Length != 4 || ConfirmPin.Text == "" || Convert.ToInt32(ConfirmPin.Text) < 0 || ConfirmPin.Text.Length != 4)
+                    {
+                        MessageBox.Show("Enter a pin of 4 DIGITS only");
+                    }
+                    else
+                    {
+                        newPin = Convert.ToInt32(NewPin.Text);
+                        try
+                        {
+                            sqlConnection.Open();
+                            //Query to add deposit to app balance.
+                            string query = "UPDATE AccountTbl SET Pin = " + newPin + " where AcctNum = '" + Login.AccNumber + "'";
+                            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                            sqlCommand.ExecuteScalar();
+
+                            MessageBox.Show("Pin changed successfully");
+
+                            HOME home = new HOME();
+                            home.Show();
+                            this.Hide();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                        finally
+                        {
+                            sqlConnection.Close();
+                        }
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    newPin = Convert.ToInt32(NewPin.Text);
-                    try
-                    {
-                        sqlConnection.Open();
-                        //Query to add deposit to app balance.
-                        string query = "UPDATE AccountTbl SET Pin = " + newPin + " where AcctNum = '" + Login.AccNumber + "'";
-                        SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                        sqlCommand.ExecuteScalar();
 
-                        MessageBox.Show("Pin changed successfully");
-
-                        HOME home = new HOME();
-                        home.Show();
-                        this.Hide();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                    }
-                    finally
-                    {
-                        sqlConnection.Close();
-                    }
                 }
+                
             }                       
             
         }

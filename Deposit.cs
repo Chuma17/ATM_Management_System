@@ -132,7 +132,8 @@ namespace ATM_Management_System
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlConnection);
 
             using (sda)
-            {//make the existing balance an int variable so it can be added
+            {
+                //make the existing balance a float variable so it can be added
                 DataTable dataTable = new DataTable();
                 sda.Fill(dataTable);
                 oldBalance = float.Parse(dataTable.Rows[0][0].ToString());
